@@ -17493,8 +17493,12 @@ SpriteRenderer.prototype.flush = function ()
     }
     else
     {
+        // variant 1: master
         var view = this.positions.subarray(0, this.currentBatchSize * this.vertByteSize);
         gl.bufferSubData(gl.ARRAY_BUFFER, 0, view);
+        // variant 2: no subarray
+        // var view = this.positions.subarray(0, this.currentBatchSize * this.vertByteSize);
+        // gl.bufferSubData(gl.ARRAY_BUFFER, 0, this.positions);
     }
 
     var nextTexture, nextBlendMode, nextShader;

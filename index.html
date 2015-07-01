@@ -10,14 +10,14 @@ var renderer = new PIXI.WebGLRenderer(1280, 720);
 
 function addSprite(x, y) {
 	var doge = new PIXI.Sprite(PIXI.Texture.fromImage("doge.jpg"));
-	doge.scale.x = 0.1;
-	doge.scale.y = 0.1;
+	doge.scale.x = 0.05;
+	doge.scale.y = 0.05;
 	doge.position.set(x, y);
 	container.addChild(doge);
 }
 
-for(var y=0; y<700; y+=50) {
-	for(var x=0; x<1100; x+=50) {
+for(var y=0; y<700; y+=25) {
+	for(var x=0; x<1100; x+=25) {
 		addSprite(x, y);
 	}
 }
